@@ -48,3 +48,8 @@ a {
 .sign-in {
   align-self: center;
 }
+
+.bug-container {
+  display: flex;
+  flex-direction: column;
+}

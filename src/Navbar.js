@@ -48,7 +48,7 @@ const UserName = styled.h2`
 
 const LinksContainer = styled.div`
     display: flex;
-    gap: 5px;
+    gap: 29px;
     align-self: center;
 `
 
