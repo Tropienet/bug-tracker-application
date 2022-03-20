@@ -34,9 +34,9 @@ const SignOutButton = styled.button`
     border: none;
     align-self: center;
     margin: 0 2.5rem;
-    background-color: #f7f7ff;
-    color: #495867;
-    font-size: 0.7rem;
+    background-color: #577399;
+    color: #f7f7ff;
+    font-size: 0.8rem;
     padding: 0.1rem 0.4rem;
 `
 
@@ -44,6 +44,16 @@ const UserName = styled.h2`
     align-self: center;
     color: #f7f7ff;
     margin: 0 2.5rem;
+`
+
+const LinksContainer = styled.div`
+    display: flex;
+    gap: 5px;
+    align-self: center;
+`
+
+const PageLink = styled.a`
+    color: #f7f7ff;
 `
 
 const Navbar = () => {
@@ -64,6 +74,11 @@ const Navbar = () => {
     return (
         <NavbarContainer>
             <SiteName>Bug tracker application</SiteName>
+            <LinksContainer>
+                <PageLink href="Bugs">Bugs</PageLink>
+                <PageLink href="/">Home</PageLink>
+                <PageLink href="BugSubmitForm">Submit a bug</PageLink>
+            </LinksContainer>
             {user 
             ? ( <UserInfoContainer >  
                     <SignOutButton onClick={() =>firebase.auth().signOut()}>Sign out</SignOutButton>

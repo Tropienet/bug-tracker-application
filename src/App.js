@@ -4,6 +4,7 @@ import './App.css';
 import Homepage from "./Homepage";
 import Login from "./Login";
 import firebase from "./firebase";
+import RouteSwitch from "./RouteSwitch";
 
 function App() {
 
@@ -18,11 +19,7 @@ function App() {
 
   if( loggedIn === true ){
     return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="" element={<Homepage />} />
-        </Routes>
-      </BrowserRouter>
+      <RouteSwitch />
     )
   }else{
     return (

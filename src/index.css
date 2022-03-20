@@ -31,6 +31,14 @@ button:hover {
   transform: scale(1.05);
 }
 
+textarea {
+  resize: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .login-header {
   color: #fe5f55;
   margin: 1.5rem 2rem;
