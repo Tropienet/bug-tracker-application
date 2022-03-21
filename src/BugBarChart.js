@@ -1,8 +1,6 @@
 import React from "react";
 import { BarChart, Bar, CartesianGrid, Tooltip, YAxis, XAxis, Legend } from "recharts";
 
-const COLORS = ["#FF0000", "#0000FF"]
-
 function BugBarChart(props) {
     const { backendBugs, frontendBugs } = props;
 

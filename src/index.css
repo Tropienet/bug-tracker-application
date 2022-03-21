@@ -54,6 +54,12 @@ a {
   flex-direction: column;
 }
 
-.bar-chart {
-  align-self: flex-end;
+.try-text {
+  align-self: center;
+  margin: 0 0 1.5rem 0;
+}
+
+.welcome-text {
+  align-self: center;
+  margin: 1.5rem 0 0 0;
 }

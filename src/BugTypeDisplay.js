@@ -13,6 +13,13 @@ const ChartsContainer = styled.div`
     justify-content: space-evenly;
 `
 
+const BugAmountContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 1.5rem; 
+`
+
 function BugTypeDisplay(props) {
     const {bugs} = props;
     const [backendBugCounter, setBackendBugCounter] = useState(0);
@@ -40,12 +47,14 @@ function BugTypeDisplay(props) {
 
     return(
         <BugTypeContainer>
-            <p>There is currently {frontendBugCounter} Frontend bugs</p>
-            <p>There is currently {backendBugCounter} Backend bugs</p>
             <ChartsContainer>
                 <BugBarChart className="bar-chart" backendBugs={backendBugCounter} frontendBugs={frontendBugCounter}/>
                 <BugPieChart backendBugs={backendBugCounter} frontendBugs={frontendBugCounter}/>
             </ChartsContainer>
+            <BugAmountContainer>
+                <p>There is currently {frontendBugCounter} Frontend bugs</p>
+                <p>There is currently {backendBugCounter} Backend bugs</p>
+            </BugAmountContainer>
         </BugTypeContainer>
     )
 }
