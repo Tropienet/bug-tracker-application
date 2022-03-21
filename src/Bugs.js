@@ -39,7 +39,7 @@ function Bugs() {
             <Navbar />
             <div className="bugContainer">
                 {bugs.map((bug) => (
-                    <Bug key={bug.bugDescription} bug={bug}></Bug>
+                    <Bug key={bug.id} bug={bug}></Bug>
                 ))}
             </div>
         </div>

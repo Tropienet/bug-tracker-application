@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import firebase from "./firebase";
 import styled from "styled-components";
+import uniqid from 'uniqid';
 
 const BugFormPageContainer = styled.div`
     display: flex;
@@ -57,6 +58,7 @@ const BugSubmitForm = () => {
         e.preventDefault();
 
         db.collection("bugs").add({
+            id: uniqid(),
             bugType: bugType,
             bugDescription: bugDescription,
             submittedby: user.displayName,     

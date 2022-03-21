@@ -14,6 +14,7 @@ const BugContainer = styled.div`
 
 const UserInfo = styled.div`
     display: flex;
+    margin: 1.5rem 0;
 `
 
 const ProfilePicture = styled.img`
@@ -26,15 +27,27 @@ const ProfilePicture = styled.img`
     margin: 0 2.5rem;
 `
 
+const UserName = styled.p`
+    align-self: center;
+`
+
+const BugType = styled.p`
+    margin: 0 0 1.5rem;
+`
+
+const BugDescription = styled.p`
+    margin: 1.5rem 0;
+`
+
 function Bug(props) {
     const { bug } = props;
 
     return(
         <BugContainer>
-            <p>Bug type: {bug.bugType}</p>
-            <p>Bug description: <br></br>{bug.bugDescription}</p>
+            <BugType >Bug type: {bug.bugType}</BugType>
+            <BugDescription>Bug description: <br></br>{bug.bugDescription}</BugDescription>
             <UserInfo>
-                <p>Submitted by: {bug.submittedby}</p>
+                <UserName >Submitted by: {bug.submittedby}</UserName >
                 <ProfilePicture src={bug.userPhoto} alt="User who submitted the bug" />
             </UserInfo>
         </BugContainer>
