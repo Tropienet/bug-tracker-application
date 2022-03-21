@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Tropienet.github.io/bug-tracker-application/static/css/main.2d283543.css",
-    "main.js": "/Tropienet.github.io/bug-tracker-application/static/js/main.e34cd6ed.js",
-    "index.html": "/Tropienet.github.io/bug-tracker-application/index.html",
-    "main.2d283543.css.map": "/Tropienet.github.io/bug-tracker-application/static/css/main.2d283543.css.map",
-    "main.e34cd6ed.js.map": "/Tropienet.github.io/bug-tracker-application/static/js/main.e34cd6ed.js.map"
+    "main.css": "/bug-tracker-application/static/css/main.2d283543.css",
+    "main.js": "/bug-tracker-application/static/js/main.a7d2a026.js",
+    "index.html": "/bug-tracker-application/index.html",
+    "main.2d283543.css.map": "/bug-tracker-application/static/css/main.2d283543.css.map",
+    "main.a7d2a026.js.map": "/bug-tracker-application/static/js/main.a7d2a026.js.map"
   },
   "entrypoints": [
     "static/css/main.2d283543.css",
-    "static/js/main.e34cd6ed.js"
+    "static/js/main.a7d2a026.js"
   ]
 }
