@@ -53,3 +53,7 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+.bar-chart {
+  align-self: flex-end;
+}

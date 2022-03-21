@@ -1,21 +1,16 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import BugPieChart from "./BugPieChart";
+import BugBarChart from "./BugBarChart";
 
 const BugTypeContainer = styled.div`
     display: flex;
     flex-direction: column;
 `
 
-const BugChartContainer = styled.div`
+const ChartsContainer = styled.div`
     display: flex;
-    width: 60%;
-    margin: 0 20%;
-`
-
-const BackendInfoContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    justify-content: space-evenly;
 `
 
 function BugTypeDisplay(props) {
@@ -43,31 +38,14 @@ function BugTypeDisplay(props) {
 
     }, [])
 
-    const BackendBugColumnStyle = {
-        backgroundColor: "red",
-        height: `${backendBugCounter*20}px`,
-        width: "5rem"
-    }
-
-    const BugTypePieChart = {
-        height: "100px",
-        width: "100px",
-        borderRadius: "50%",
-        background: `conic-gradient(red ${((backendBugCounter)/(backendBugCounter+frontendBugCounter))*100}%, blue ${((frontendBugCounter)/(backendBugCounter+frontendBugCounter))*100}%)`
-    }
-
     return(
         <BugTypeContainer>
             <p>There is currently {frontendBugCounter} Frontend bugs</p>
             <p>There is currently {backendBugCounter} Backend bugs</p>
-            <BugChartContainer>
-                <BackendInfoContainer>
-                    <div style={BackendBugColumnStyle}></div>
-                    <p>There is currently {backendBugCounter} Backend bugs</p>
-                </BackendInfoContainer>
-
-            </BugChartContainer>
-            <div style={BugTypePieChart}></div>
+            <ChartsContainer>
+                <BugBarChart className="bar-chart" backendBugs={backendBugCounter} frontendBugs={frontendBugCounter}/>
+                <BugPieChart backendBugs={backendBugCounter} frontendBugs={frontendBugCounter}/>
+            </ChartsContainer>
         </BugTypeContainer>
     )
 }
